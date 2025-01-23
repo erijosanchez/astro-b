@@ -47,8 +47,13 @@ const { align = 'center', tagline, title } = Astro.props;
 			margin-inline: unset;
 		}
 
+		.tagline {
+			font-size: var(--text-lg);
+			max-width: 40ch
+		}
+
 		.title {
-			font-size: var(--text-5xl);
+			font-size: var(--text-4xl);
 		}
 	}
 </style>

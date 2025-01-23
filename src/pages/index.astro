@@ -29,14 +29,13 @@ const projects = (await getCollection('work'))
 		<div class="gap-8 lg:gap-20 stack wrapper">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="¡Hola! Soy Erick José Sánchez Pinedo"
+					tagline="Soy un desarrollador web Jr apasionado por la creación de soluciones tecnológicas innovadoras. Actualmente, curso la carrera de Ingeniería en Tecnologías de la Información."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="code" size="1.33em" />Web Developer</Pill>
+						<Pill><Icon icon="rocket-launch" size="1.33em" />Full Stack</Pill>
 					</div>
 				</Hero>
 
@@ -44,7 +43,7 @@ const projects = (await getCollection('work'))
 					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
 					width="480"
 					height="620"
-					src="/assets/portrait.jpg"
+					src="/assets/2pofe.jpg"
 				/>
 			</header>
 
@@ -118,10 +117,10 @@ const projects = (await getCollection('work'))
 	}
 
 	.hero img {
-		aspect-ratio: 5 / 4;
+		aspect-ratio: 5 / 5;
 		object-fit: cover;
 		object-position: top;
-		border-radius: 1.5rem;
+		border-radius: 50%;
 		box-shadow: var(--shadow-md);
 	}
 
@@ -140,8 +139,8 @@ const projects = (await getCollection('work'))
 		}
 
 		.hero img {
-			aspect-ratio: 3 / 4;
-			border-radius: 4.5rem;
+			aspect-ratio: 4 / 4;
+			border-radius: 50%;
 			object-fit: cover;
 		}
 	}
