@@ -14,8 +14,8 @@ const icons = [
 <style>
     .profile-container {
         position: relative;
-        width: 400px;
-        height: 400px;
+        width: 350px;
+        height: 350px;
         margin: auto;
         perspective: 1000px;
         cursor: pointer;
@@ -90,7 +90,7 @@ const icons = [
     }
 
     .profile-image:hover {
-        transform: scale(1.05) rotate(-5deg);
+        transform: scale(1.01) rotate(-5deg);
     }
 
     .tech-orbit-icon {
@@ -103,10 +103,10 @@ const icons = [
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        transform: rotate(var(--angle)) translateX(240px)
+        transform: rotate(var(--angle)) translateX(212px)
             rotate(calc(-1 * var(--angle)));
         transform-origin: center;
-        animation: continuousOrbitalWaves 12s linear infinite;
+        animation: continuousOrbitalWaves 18s linear infinite;
         animation-delay: var(--delay);
         z-index: 99;
     }
@@ -128,11 +128,11 @@ const icons = [
     @keyframes continuousOrbitalWaves {
         0%,
         100% {
-            transform: rotate(var(--angle)) translateX(240px)
+            transform: rotate(var(--angle)) translateX(212px)
                 rotate(calc(-1 * var(--angle)));
         }
         50% {
-            transform: rotate(calc(var(--angle) + 180deg)) translateX(240px)
+            transform: rotate(calc(var(--angle) + 180deg)) translateX(212px)
                 rotate(calc(-1 * (var(--angle) + 180deg)));
         }
     }
@@ -143,13 +143,13 @@ const icons = [
             transform: translateY(var(--random-vertical-offset));
         }
         50% {
-            transform: translateY(calc(-1.5 * var(--random-vertical-offset)));
+            transform: translateY(calc(-0.5 * var(--random-vertical-offset)));
         }
     }
 
     @keyframes fireworksDispersion {
         0% {
-            transform: rotate(var(--angle)) translateX(240px)
+            transform: rotate(var(--angle)) translateX(212px)
                 rotate(calc(-1 * var(--angle)));
             opacity: 1;
         }
@@ -160,7 +160,7 @@ const icons = [
             opacity: 0.5;
         }
         100% {
-            transform: rotate(var(--angle)) translateX(240px)
+            transform: rotate(var(--angle)) translateX(212px)
                 rotate(calc(-1 * var(--angle)));
             opacity: 1;
         }
@@ -219,7 +219,7 @@ const icons = [
                 const randomDistance = Math.random() * 500 + 200;
                 const randomVertical = (Math.random() - 0.5) * 150;
 
-                icon.style.animation = `fireworksDispersion 2s ease-out forwards ${index * 0.1}s`;
+                icon.style.animation = `fireworksDispersion 2s ease-out forwards ${index * 0.12}s`;
                 icon.style.setProperty("--random-angle", `${randomAngle}deg`);
                 icon.style.setProperty(
                     "--random-distance",
@@ -236,7 +236,7 @@ const icons = [
                 icons.forEach((icon, index) => {
                     icon.style.animation = ""; // Reinicia la animación para que se pueda aplicar de nuevo
                     void icon.offsetWidth; // Forzar el reinicio del ciclo de animación
-                    icon.style.animation = `continuousOrbitalWaves 12s linear infinite ${index * 0.13}s`;
+                    icon.style.animation = `continuousOrbitalWaves 18s linear infinite ${index * 0.13}s`;
                 });
             }, 2500); // Tiempo suficiente para que termine fireworksDispersion
         });
